@@ -1,0 +1,22 @@
+diff a/src/server/game/Battlegrounds/ArenaTeam.cpp b/src/server/game/Battlegrounds/ArenaTeam.cpp	(rejected hunks)
+@@ -571,9 +571,10 @@ uint8 ArenaTeam::GetSlotByType(uint32 type)
+ {
+     switch (type)
+     {
+-        case ARENA_TEAM_2v2: return 0;
++		case ARENA_TEAM_2v2: return 0;
+         case ARENA_TEAM_3v3: return 1;
+         case ARENA_TEAM_5v5: return 2;
++		case ARENA_TEAM_1v1: return 3; // 1v1 Arena DevKM
+         default:
+             break;
+     }
+@@ -610,6 +611,8 @@ uint32 ArenaTeam::GetPoints(uint32 memberRating)
+         points *= 0.75f;
+     else if (Type == ARENA_TEAM_3v3)
+         points *= 0.90f;
++	else if (Type == ARENA_TEAM_1v1) //1v1 Arena DevKM
++        points *= 0.70f;
+ 
+ 		
+     return (uint32) points;

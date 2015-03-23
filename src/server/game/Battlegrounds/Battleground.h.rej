@@ -1,0 +1,9 @@
+diff a/src/server/game/Battlegrounds/Battleground.h b/src/server/game/Battlegrounds/Battleground.h	(rejected hunks)
+@@ -201,6 +201,7 @@ enum ScoreType
+ 
+ enum ArenaType
+ {
++	ARENA_TYPE_1v1			= 1,
+     ARENA_TYPE_2v2          = 2,
+     ARENA_TYPE_3v3          = 3,
+     ARENA_TYPE_5v5          = 5
